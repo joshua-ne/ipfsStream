@@ -4,7 +4,6 @@ from flask_bootstrap import Bootstrap
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
-import os
 
 # local imports
 from config import app_config
@@ -39,6 +38,3 @@ def create_app(config_name):
     return app
 
 
-config_name = os.getenv('FLASK_CONFIG')
-config_name = 'production'
-app = create_app(config_name)
